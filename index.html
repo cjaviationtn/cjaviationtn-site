@@ -74,11 +74,11 @@ p{margin:0 0 1.1em}
   font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;
   font-size:1.18rem;line-height:1;color:var(--brand-ink);letter-spacing:.02em;white-space:nowrap;
 }
-.brand-sub{font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--brand-dim);line-height:1.6}
+.brand-sub{font-size:.7rem;white-space:nowrap;letter-spacing:.19em;text-transform:uppercase;color:var(--brand-dim);line-height:1.6}
 .nav-links{display:flex;gap:26px;align-items:center}
 .nav-links a{
   color:var(--brand-dim);text-decoration:none;font-size:.9rem;font-weight:500;
-  letter-spacing:.02em;padding:6px 0;border-bottom:2px solid transparent;
+  letter-spacing:.02em;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap;
 }
 .nav-links a:hover{color:var(--brand-ink);border-bottom-color:var(--gold)}
 .nav-call{
@@ -105,11 +105,12 @@ p{margin:0 0 1.1em}
           mask-image:radial-gradient(80% 70% at 50% 30%,#000,transparent 78%);
 }
 .hero .wrap{position:relative;z-index:1;padding-top:92px;padding-bottom:88px}
-.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center}
+.hero-grid{display:flex;flex-direction:column;gap:30px}
+.hero-grid>div:first-child{order:2}
 .hero-badge{
-  width:min(250px,100%);aspect-ratio:1;margin:0 0 0 auto;
+  order:1;width:min(190px,100%);aspect-ratio:1;border-radius:50%;margin:0;
   background:var(--logo) center/contain no-repeat;
-  filter:drop-shadow(0 16px 34px rgba(0,0,0,.34));
+  box-shadow:0 0 0 3px var(--brand-ink), 0 14px 34px rgba(0,0,0,.36);
 }
 .hero h1{color:var(--hero-ink);margin-bottom:.32em}
 .hero h1 em{font-style:normal;color:var(--hero-em)}
@@ -299,22 +300,32 @@ p{margin:0 0 1.1em}
   .nav-links a{width:100%;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
   .nav-toggle{display:inline-flex}
   .about-grid,.area-grid{grid-template-columns:1fr;gap:38px}
-  .hero-grid{grid-template-columns:1fr;gap:30px}
-  .hero-badge{width:150px;margin:0}
+  .hero-badge{width:150px}
   .svc-grid,.gal-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:620px){
   body{font-size:16px}
   .section{padding:56px 0}
   .hero .wrap{padding-top:64px;padding-bottom:60px}
-  .hero-badge{display:none}
+  .hero-badge{width:126px}
   .svc-grid,.gal-grid,.contact-grid,.addr-grid,.area-list{grid-template-columns:1fr}
   .svc-feature{grid-template-columns:1fr;gap:16px;padding:24px}
   .cta-row .btn{width:100%}
   .brand-sub{display:none}
   .nav-call span{display:none}
   .nav-call{padding:11px 13px}
+}
+/* the nav needs to collapse earlier than the content grids, or it crams */
+@media (max-width:1040px){
+  .nav-links{
+    display:none;position:absolute;top:68px;left:0;right:0;background:var(--brand);
+    flex-direction:column;gap:0;padding:8px 22px 18px;border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav-toggle{display:inline-flex}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
