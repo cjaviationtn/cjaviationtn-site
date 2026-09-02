@@ -228,7 +228,7 @@ p{margin:0 0 1.1em}
   background:var(--band-tile);
   border:1px solid var(--hero-badge-line);display:grid;place-items:center;text-align:center;padding:20px;
 }
-.gal img{width:100%;height:100%;object-fit:cover}
+.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .gal-ph svg{width:36px;height:36px;color:var(--gold);margin:0 auto 10px}
 .gal-ph span{display:block;font-size:.83rem;color:var(--band-body);letter-spacing:.04em}
 .gal-note{margin-top:26px;font-size:.9rem;color:var(--band-body)}
@@ -550,16 +550,14 @@ p{margin:0 0 1.1em}
       <h2>On the job</h2>
       <p class="lede">Work in progress, the shop, and aircraft we've had our hands on.</p>
       <div class="gal-grid">
-        <!-- To use a real photo: replace the whole gal-ph block below with
-             <img src="images/your-photo.jpg" alt="Short description of the photo"> -->
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 1</span></div></figure>
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 2</span></div></figure>
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 3</span></div></figure>
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 4</span></div></figure>
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 5</span></div></figure>
-        <figure class="gal" style="margin:0"><div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M7.5 5 9 3h6l1.5 2"/></svg><span>Photo 6</span></div></figure>
+        <figure class="gal" style="margin:0"><img src="gallery-1.jpg" alt="The C&amp;J Aviation truck and enclosed shop trailer parked at a grass airstrip" loading="lazy" width="1200" height="900"></figure>
+        <figure class="gal" style="margin:0"><img src="trailer.jpg" alt="Inside the mobile shop trailer &mdash; tool chests, compressor and parts storage" loading="lazy" width="768" height="576"></figure>
+        <figure class="gal" style="margin:0"><img src="gallery-2.jpg" alt="An aircraft engine with the cowling removed, mid-maintenance in the hangar" loading="lazy" width="1200" height="900"></figure>
+        <figure class="gal" style="margin:0"><img src="gallery-3.jpg" alt="A Beechcraft Bonanza up on jacks in the hangar during maintenance" loading="lazy" width="1200" height="900"></figure>
+        <figure class="gal" style="margin:0"><img src="gallery-5.jpg" alt="Valve train parts laid out in order on a shop cart during an engine teardown" loading="lazy" width="1200" height="900"></figure>
+        <figure class="gal" style="margin:0"><img src="gallery-6.jpg" alt="A restored Cessna 140 back together in the hangar" loading="lazy" width="1200" height="900"></figure>
       </div>
-      <p class="gal-note">Send me six photos and I'll drop them in. Landscape shots work best. Avoid anything with an N-number you don't have permission to show.</p>
+      
     </div>
   </section>
 
