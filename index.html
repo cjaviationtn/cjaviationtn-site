@@ -176,11 +176,19 @@ p{margin:0 0 1.1em}
 .svc-ico svg{width:23px;height:23px;color:var(--accent-dark)}
 .svc h3{margin-bottom:8px;font-size:1.12rem}
 .svc p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.6}
-.svc-note{
-  margin-top:34px;padding:18px 22px;background:var(--paper);border:1px dashed var(--accent);
-  border-radius:12px;font-size:.94rem;color:var(--body);
+.svc-feature{
+  grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;
+  background:linear-gradient(115deg,var(--accent-soft),var(--paper) 62%);
+  border:1px solid var(--accent);padding:30px;
 }
-.svc-note strong{color:var(--ink)}
+.svc-feature .svc-ico{background:var(--accent);margin:0}
+.svc-feature .svc-ico svg{color:#0e1a24}
+.svc-feature h3{font-size:1.42rem;margin-bottom:9px}
+.svc-feature p{font-size:1.03rem;color:var(--body);max-width:68ch}
+.svc-tag{
+  display:inline-block;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:700;color:var(--accent-dark);margin-bottom:9px;
+}
 
 /* ---------- Service area ---------- */
 .area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
@@ -281,6 +289,7 @@ p{margin:0 0 1.1em}
   .section{padding:56px 0}
   .hero .wrap{padding-top:64px;padding-bottom:60px}
   .svc-grid,.gal-grid,.contact-grid,.addr-grid,.area-list{grid-template-columns:1fr}
+  .svc-feature{grid-template-columns:1fr;gap:16px;padding:24px}
   .cta-row .btn{width:100%}
   .brand-sub{display:none}
   .nav-call span{display:none}
@@ -408,6 +417,14 @@ p{margin:0 0 1.1em}
       <p class="lede">Inspections, maintenance, and repairs for piston General Aviation aircraft &mdash; performed on site whenever the job allows.</p>
 
       <div class="svc-grid">
+        <article class="svc svc-feature">
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <div>
+            <span class="svc-tag">Our Specialty</span>
+            <h3>We specialize in pre-buy inspections</h3>
+            <p>Call us before considering purchasing an airplane, and we will do a thorough pre-buy inspection that fits within your budget.</p>
+          </div>
+        </article>
         <article class="svc">
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
           <h3>Annual Inspections</h3>
@@ -426,7 +443,7 @@ p{margin:0 0 1.1em}
         <article class="svc">
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
           <h3>Mobile / On-Site Service</h3>
-          <p>Our specialty. We bring tooling and expertise to your hangar or tiedown so your aircraft doesn't have to be flown somewhere to be worked on.</p>
+          <p>We bring tooling and expertise to your hangar or tiedown so your aircraft doesn't have to be flown somewhere to be worked on.</p>
         </article>
         <article class="svc">
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h2"/></svg></div>
@@ -434,13 +451,11 @@ p{margin:0 0 1.1em}
           <p>Airworthiness Directive research, compliance verification, and clean recordkeeping so the status of your aircraft is never in question.</p>
         </article>
         <article class="svc">
-          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
-          <h3>Logbook Entries &amp; Return to Service</h3>
-          <p>Accurate, legible logbook entries and return-to-service documentation that hold up at the next annual &mdash; and at resale.</p>
+          <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
+          <h3>Mobile Weight &amp; Balance</h3>
+          <p>If you've had any maintenance or repairs done, we can come to your aircraft and re-weigh it.</p>
         </article>
       </div>
-
-      <p class="svc-note"><strong>Note for Joel:</strong> this list is a starting draft built from what your current site says. Trim anything you don't want to advertise, and tell me what to add &mdash; owner-assisted annuals, pre-buy inspections, avionics coordination, oil analysis, ferry permits, whatever fits. Delete this box before going live.</p>
     </div>
   </section>
 
@@ -473,7 +488,7 @@ p{margin:0 0 1.1em}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Knoxville area fields</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Greater East Tennessee</li>
           </ul>
-          <p style="margin-top:22px;font-size:.92rem;color:var(--muted)"><em>Joel &mdash; tell me your actual travel radius and which fields you want named here, and I'll swap this list out.</em></p>
+          <p style="margin-top:22px;font-size:.94rem;color:var(--muted)">These are the areas we work most often &mdash; not a boundary. If you're further out, call and we'll work it out.</p>
         </div>
       </div>
     </div>
