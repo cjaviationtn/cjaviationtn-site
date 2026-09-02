@@ -5,43 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>C&amp;J Aviation LLC — Mobile Aircraft Maintenance | A&amp;P/IA | East Tennessee</title>
 <meta name="description" content="Veteran-owned mobile aircraft maintenance based at Monroe County Airport (KMNV), Madisonville, TN. Certified A&amp;P/IA mechanics. Annual inspections, repairs, and general maintenance for General Aviation.">
-<meta name="theme-color" content="#0e1a24">
+<meta name="theme-color" content="#2d4464">
 <link rel="canonical" href="https://cjaviationtn.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="C&amp;J Aviation LLC — Mobile Aircraft Maintenance">
 <meta property="og:description" content="Veteran-owned, certified A&amp;P/IA mechanics serving General Aviation from KMNV in Madisonville, Tennessee. We come to your hangar.">
 <meta property="og:url" content="https://cjaviationtn.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e1a24'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23f0932b' text-anchor='middle'%3ECJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ---------- Brand palette: taken from the C&J badge ---------- */
 :root{
-  --ink:#0e1a24;
-  --ink-2:#16283a;
-  --ink-3:#1e3548;
-  --paper:#ffffff;
-  --paper-2:#f4f6f8;
-  --paper-3:#e7ecf1;
-  --body:#33454f;
-  --muted:#6b7f8c;
-  --line:#d7e0e7;
-  --accent:#f0932b;
-  --accent-dark:#c9741a;
-  --accent-soft:#fdf1e2;
-  --maxw:1120px;
-  --radius:14px;
-  --shadow:0 1px 2px rgba(14,26,36,.06),0 8px 24px rgba(14,26,36,.08);
+  --ground:#eef2f7; --surface:#ffffff; --surface-2:#e3eaf2; --line:#d3dde8;
+  --ink:#1c2f47; --body:#44566a; --muted:#74869a;
+  --brand:#2d4464; --brand-2:#1f3149; --brand-ink:#f8f4de; --brand-dim:#a4b4c6;
+  --accent:#a8404a; --accent-ink:#8e333c; --accent-soft:#f6e7e5; --accent-on:#ffffff;
+  --gold:#f5c084;
+  --hero-bg:radial-gradient(1000px 500px at 80% -10%,rgba(245,192,132,.22),transparent 62%),linear-gradient(168deg,#3a5476 0%,#2d4464 55%,#22354f 100%);
+  --hero-ink:#ffffff; --hero-body:#c3d1de; --hero-em:#f5c084; --hero-grid:rgba(255,255,255,.05);
+  --hero-badge-bg:#ffffff12; --hero-badge-line:#ffffff2b; --hero-badge-ink:#d8e2ea;
+  --band:#2d4464; --band-ink:#f8f4de; --band-body:#a4b4c6; --band-tile:#37507350; --band-em:#f5c084;
+  --stat-bg:#22354f; --stat-num:#f5c084; --stat-label:#a4b4c6; --stat-line:#ffffff1f;
+  --shadow:0 1px 2px rgba(28,47,71,.06),0 8px 24px rgba(28,47,71,.09);
 }
+:root{--maxw:1120px;--radius:14px;--logo:url(logo.png)}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--paper);color:var(--body);
+  margin:0;background:var(--ground);color:var(--body);
   font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
-a{color:var(--accent-dark);text-decoration-thickness:1px;text-underline-offset:3px}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px}
 h1,h2,h3,.display{
   font-family:"Barlow Condensed",Inter,system-ui,sans-serif;
   font-weight:700;line-height:1.06;letter-spacing:.01em;
@@ -56,71 +54,73 @@ p{margin:0 0 1.1em}
 .section--tight{padding:58px 0}
 .eyebrow{
   font-family:"Barlow Condensed",sans-serif;font-weight:600;text-transform:uppercase;
-  letter-spacing:.16em;font-size:.95rem;color:var(--accent-dark);margin:0 0 .6em;
+  letter-spacing:.16em;font-size:.95rem;color:var(--accent-ink);margin:0 0 .6em;
 }
 .lede{font-size:1.12rem;color:var(--body);max-width:62ch}
 
 /* ---------- Header ---------- */
 .site-header{
-  position:sticky;top:0;z-index:60;background:rgba(14,26,36,.94);
-  backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.09);
+  position:sticky;top:0;z-index:60;background:var(--brand);
+  backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #ffffff1f;
 }
 .nav{display:flex;align-items:center;gap:18px;height:68px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto;min-width:0}
 .brand-mark{
-  width:40px;height:40px;border-radius:9px;background:var(--accent);
-  display:grid;place-items:center;flex:none;
-  font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.25rem;color:#0e1a24;letter-spacing:-.02em;
+  width:46px;height:46px;flex:none;display:block;border-radius:50%;
+  background:var(--logo) center/86% no-repeat var(--brand-ink);
 }
 .brand-text{min-width:0}
 .brand-name{
   font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;
-  font-size:1.18rem;line-height:1;color:#fff;letter-spacing:.02em;white-space:nowrap;
+  font-size:1.18rem;line-height:1;color:var(--brand-ink);letter-spacing:.02em;white-space:nowrap;
 }
-.brand-sub{font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:#93a8b6;line-height:1.6}
+.brand-sub{font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--brand-dim);line-height:1.6}
 .nav-links{display:flex;gap:26px;align-items:center}
 .nav-links a{
-  color:#cfdae2;text-decoration:none;font-size:.9rem;font-weight:500;
+  color:var(--brand-dim);text-decoration:none;font-size:.9rem;font-weight:500;
   letter-spacing:.02em;padding:6px 0;border-bottom:2px solid transparent;
 }
-.nav-links a:hover{color:#fff;border-bottom-color:var(--accent)}
+.nav-links a:hover{color:var(--brand-ink);border-bottom-color:var(--gold)}
 .nav-call{
-  display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0e1a24;
+  display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-on);
   padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:700;font-size:.92rem;white-space:nowrap;
 }
-.nav-call:hover{background:#ffa63f}
+.nav-call:hover{background:var(--accent-ink)}
 .nav-toggle{
-  display:none;background:none;border:1px solid rgba(255,255,255,.22);border-radius:8px;
-  width:42px;height:38px;color:#fff;cursor:pointer;align-items:center;justify-content:center;
+  display:none;background:none;border:1px solid #ffffff38;border-radius:8px;
+  width:42px;height:38px;color:var(--brand-ink);cursor:pointer;align-items:center;justify-content:center;
 }
 .nav-toggle svg{width:20px;height:20px}
 
 /* ---------- Hero ---------- */
 .hero{
-  position:relative;color:#e9f0f5;overflow:hidden;
-  background:
-    radial-gradient(1100px 520px at 78% -10%,rgba(240,147,43,.20),transparent 62%),
-    linear-gradient(170deg,#16283a 0%,#0e1a24 58%,#0b141c 100%);
+  position:relative;color:var(--hero-body);overflow:hidden;background:var(--hero-bg);
 }
 .hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
-  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-image:linear-gradient(var(--hero-grid) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--hero-grid) 1px,transparent 1px);
   background-size:64px 64px;
   -webkit-mask-image:radial-gradient(80% 70% at 50% 30%,#000,transparent 78%);
           mask-image:radial-gradient(80% 70% at 50% 30%,#000,transparent 78%);
 }
 .hero .wrap{position:relative;z-index:1;padding-top:92px;padding-bottom:88px}
-.hero h1{color:#fff;max-width:19ch;margin-bottom:.32em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-lede{font-size:1.2rem;color:#b9c9d4;max-width:56ch;margin-bottom:2rem}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:center}
+.hero-badge{
+  width:min(250px,100%);aspect-ratio:1;margin:0 0 0 auto;
+  background:var(--logo) center/contain no-repeat;
+  filter:drop-shadow(0 16px 34px rgba(0,0,0,.34));
+}
+.hero h1{color:var(--hero-ink);margin-bottom:.32em}
+.hero h1 em{font-style:normal;color:var(--hero-em)}
+.hero-lede{font-size:1.2rem;color:var(--hero-body);max-width:56ch;margin-bottom:2rem}
 .hero-badges{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:1.9rem}
 .badge{
   display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;
-  letter-spacing:.03em;color:#d5e2ea;background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.14);padding:7px 13px;border-radius:999px;
+  letter-spacing:.03em;color:var(--hero-badge-ink);background:var(--hero-badge-bg);
+  border:1px solid var(--hero-badge-line);padding:7px 13px;border-radius:999px;
 }
-.badge svg{width:14px;height:14px;color:var(--accent);flex:none}
+.badge svg{width:14px;height:14px;color:var(--hero-em);flex:none}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:9px;
@@ -129,20 +129,20 @@ p{margin:0 0 1.1em}
 }
 .btn:active{transform:translateY(1px)}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-primary{background:var(--accent);color:#0e1a24}
-.btn-primary:hover{background:#ffa63f}
-.btn-ghost{background:transparent;color:#e9f0f5;border-color:rgba(255,255,255,.3)}
-.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.5)}
+.btn-primary{background:var(--accent);color:var(--accent-on)}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-ghost{background:transparent;color:var(--hero-ink);border-color:var(--hero-badge-line)}
+.btn-ghost:hover{background:var(--hero-badge-bg)}
 
 /* ---------- Stat strip ---------- */
-.stats{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.08)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.09)}
-.stat{background:var(--ink-2);padding:26px 20px;text-align:center}
+.stats{background:var(--stat-bg)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--stat-line)}
+.stat{background:var(--stat-bg);padding:26px 20px;text-align:center}
 .stat-num{
   font-family:"Barlow Condensed",sans-serif;font-size:2.2rem;font-weight:700;
-  color:var(--accent);line-height:1;margin-bottom:5px;
+  color:var(--stat-num);line-height:1;margin-bottom:5px;
 }
-.stat-label{font-size:.79rem;letter-spacing:.11em;text-transform:uppercase;color:#9fb2c0}
+.stat-label{font-size:.79rem;letter-spacing:.11em;text-transform:uppercase;color:var(--stat-label)}
 
 /* ---------- About ---------- */
 .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
@@ -151,91 +151,109 @@ p{margin:0 0 1.1em}
   font-size:1.16rem;font-weight:500;color:var(--ink);line-height:1.55;
 }
 .fact-card{
-  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius);
   padding:26px 26px 10px;
 }
 .fact-card h3{margin-bottom:16px;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;font-family:"Barlow Condensed",sans-serif;color:var(--ink)}
 .fact-list{list-style:none;margin:0;padding:0}
 .fact-list li{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:.97rem}
 .fact-list li:first-child{border-top:0}
-.fact-list svg{width:17px;height:17px;color:var(--accent-dark);flex:none;margin-top:4px}
+.fact-list svg{width:17px;height:17px;color:var(--accent-ink);flex:none;margin-top:4px}
 .fact-list strong{display:block;color:var(--ink);font-weight:600}
 .fact-list span{color:var(--muted);font-size:.9rem}
 
 /* ---------- Services ---------- */
-.services{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.services{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
 .svc{
-  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
   padding:28px 26px;box-shadow:var(--shadow);
 }
 .svc-ico{
   width:46px;height:46px;border-radius:11px;background:var(--accent-soft);
   display:grid;place-items:center;margin-bottom:16px;
 }
-.svc-ico svg{width:23px;height:23px;color:var(--accent-dark)}
+.svc-ico svg{width:23px;height:23px;color:var(--accent-ink)}
 .svc h3{margin-bottom:8px;font-size:1.12rem}
 .svc p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.6}
 .svc-feature{
   grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;
-  background:linear-gradient(115deg,var(--accent-soft),var(--paper) 62%);
+  background:linear-gradient(115deg,var(--accent-soft),var(--surface) 62%);
   border:1px solid var(--accent);padding:30px;
 }
 .svc-feature .svc-ico{background:var(--accent);margin:0}
-.svc-feature .svc-ico svg{color:#0e1a24}
+.svc-feature .svc-ico svg{color:var(--accent-on)}
 .svc-feature h3{font-size:1.42rem;margin-bottom:9px}
 .svc-feature p{font-size:1.03rem;color:var(--body);max-width:68ch}
 .svc-tag{
   display:inline-block;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
-  font-weight:700;color:var(--accent-dark);margin-bottom:9px;
+  font-weight:700;color:var(--accent-ink);margin-bottom:9px;
+}
+.svc-feature p{margin-bottom:.8em}
+.svc-kicker{
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:1.3rem;letter-spacing:.015em;color:var(--accent);margin:16px 0 0;
+  padding-top:14px;border-top:1px solid var(--line);
 }
 
 /* ---------- Service area ---------- */
 .area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
 .area-visual{
   position:relative;border-radius:var(--radius);overflow:hidden;
-  background:linear-gradient(165deg,#16283a,#0e1a24);padding:38px 32px;color:#e9f0f5;
+  background:linear-gradient(165deg,var(--brand),var(--brand-2));padding:38px 32px;color:var(--brand-ink);
 }
 .area-visual::after{
   content:"";position:absolute;inset:0;opacity:.6;
-  background-image:radial-gradient(circle at 50% 50%,rgba(240,147,43,.28),transparent 58%);
+  background-image:radial-gradient(circle at 50% 50%,rgba(245,192,132,.30),transparent 58%);
 }
 .rings{position:relative;z-index:1;display:grid;place-items:center;padding:12px 0 22px}
 .rings svg{width:100%;max-width:270px;height:auto}
 .area-visual .apt{position:relative;z-index:1;text-align:center}
 .area-visual .apt-code{
-  font-family:"Barlow Condensed",sans-serif;font-size:2.1rem;font-weight:700;color:var(--accent);line-height:1;
+  font-family:"Barlow Condensed",sans-serif;font-size:2.1rem;font-weight:700;color:var(--gold);line-height:1;
 }
-.area-visual .apt-name{font-size:.95rem;color:#b9c9d4;margin-top:4px}
+.area-visual .apt-name{font-size:.95rem;color:var(--brand-dim);margin-top:4px}
 .area-list{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
 .area-list li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem}
-.area-list svg{width:16px;height:16px;color:var(--accent-dark);flex:none;margin-top:5px}
+.area-list svg{width:16px;height:16px;color:var(--accent-ink);flex:none;margin-top:5px}
 
 /* ---------- Gallery ---------- */
-.gallery{background:var(--ink);color:#e9f0f5;}
-.gallery h2{color:#fff}
-.gallery .lede{color:#b9c9d4}
+.gallery{background:var(--band);color:var(--band-body)}
+.gallery h2{color:var(--band-ink)}
+.gallery .lede{color:var(--band-body)}
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
 .gal{
   aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;
-  background:linear-gradient(150deg,#1e3548,#16283a);
-  border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;text-align:center;padding:20px;
+  background:var(--band-tile);
+  border:1px solid var(--hero-badge-line);display:grid;place-items:center;text-align:center;padding:20px;
 }
 .gal img{width:100%;height:100%;object-fit:cover}
-.gal-ph svg{width:36px;height:36px;color:rgba(240,147,43,.75);margin:0 auto 10px}
-.gal-ph span{display:block;font-size:.83rem;color:#8fa4b3;letter-spacing:.04em}
-.gal-note{margin-top:26px;font-size:.9rem;color:#8fa4b3}
+.gal-ph svg{width:36px;height:36px;color:var(--gold);margin:0 auto 10px}
+.gal-ph span{display:block;font-size:.83rem;color:var(--band-body);letter-spacing:.04em}
+.gal-note{margin-top:26px;font-size:.9rem;color:var(--band-body)}
 
 /* ---------- Contact ---------- */
-.contact{background:var(--paper-2);border-top:1px solid var(--line)}
-.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.contact{background:var(--surface-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.person-head{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+.person-photo{
+  width:74px;height:74px;border-radius:50%;flex:none;overflow:hidden;
+  background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;
+}
+.person-photo img{width:100%;height:100%;object-fit:cover}
+.person-photo svg{width:30px;height:30px;color:var(--muted)}
+.person-bio{font-size:.95rem;color:var(--body);margin:0 0 18px;line-height:1.6}
+.bio-todo{
+  display:block;font-size:.88rem;color:var(--muted);font-style:italic;
+  border:1px dashed var(--accent);border-radius:10px;padding:11px 13px;
+}
 .card{
-  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
   padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;
 }
 .card--wide{grid-column:1/-1}
 .card-role{
-  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);
+  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);
   font-weight:700;margin-bottom:6px;
 }
 .card-name{
@@ -245,17 +263,17 @@ p{margin:0 0 1.1em}
 .card-cert{font-size:.9rem;color:var(--muted);margin-bottom:18px}
 .tel{
   margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:1.02rem;
+  background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:1.02rem;
   padding:14px 20px;border-radius:10px;letter-spacing:.01em;
 }
-.tel:hover{background:var(--ink-3)}
-.tel svg{width:17px;height:17px;color:var(--accent);flex:none}
-.tel--accent{background:var(--accent);color:#0e1a24}
-.tel--accent:hover{background:#ffa63f}
-.tel--accent svg{color:#0e1a24}
+.tel:hover{background:var(--brand-2)}
+.tel svg{width:17px;height:17px;color:var(--gold);flex:none}
+.tel--accent{background:var(--accent);color:var(--accent-on)}
+.tel--accent:hover{background:var(--accent-ink)}
+.tel--accent svg{color:var(--accent-on)}
 .addr-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:20px}
 .addr h4{
-  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark);
+  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);
   font-weight:700;margin:0 0 8px;
 }
 .addr p{margin:0;font-size:.98rem;line-height:1.55}
@@ -263,24 +281,26 @@ p{margin:0 0 1.1em}
 .addr a:hover{text-decoration:underline}
 
 /* ---------- Footer ---------- */
-.site-footer{background:var(--ink);color:#8fa4b3;padding:48px 0 34px;font-size:.9rem}
+.site-footer{background:var(--brand);color:var(--brand-dim);padding:48px 0 34px;font-size:.9rem}
 .foot-top{display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between;
-  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:22px}
+  padding-bottom:26px;border-bottom:1px solid #ffffff26;margin-bottom:22px}
 .foot-links{display:flex;flex-wrap:wrap;gap:22px}
-.foot-links a{color:#b9c9d4;text-decoration:none}
-.foot-links a:hover{color:var(--accent)}
+.foot-links a{color:var(--brand-dim);text-decoration:none}
+.foot-links a:hover{color:var(--gold)}
 .foot-bottom{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.84rem}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
   .nav-links{
-    display:none;position:absolute;top:68px;left:0;right:0;background:var(--ink);
+    display:none;position:absolute;top:68px;left:0;right:0;background:var(--brand);
     flex-direction:column;gap:0;padding:8px 22px 18px;border-bottom:1px solid rgba(255,255,255,.12);
   }
   .nav-links.open{display:flex}
   .nav-links a{width:100%;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
   .nav-toggle{display:inline-flex}
   .about-grid,.area-grid{grid-template-columns:1fr;gap:38px}
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero-badge{width:150px;margin:0}
   .svc-grid,.gal-grid{grid-template-columns:repeat(2,1fr)}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -288,6 +308,7 @@ p{margin:0 0 1.1em}
   body{font-size:16px}
   .section{padding:56px 0}
   .hero .wrap{padding-top:64px;padding-bottom:60px}
+  .hero-badge{display:none}
   .svc-grid,.gal-grid,.contact-grid,.addr-grid,.area-list{grid-template-columns:1fr}
   .svc-feature{grid-template-columns:1fr;gap:16px;padding:24px}
   .cta-row .btn{width:100%}
@@ -307,7 +328,7 @@ p{margin:0 0 1.1em}
   <div class="wrap">
     <nav class="nav">
       <a class="brand" href="#top">
-        <span class="brand-mark">CJ</span>
+        <span class="brand-mark" role="img" aria-label="C&amp;J Aviation LLC badge"></span>
         <span class="brand-text">
           <span class="brand-name">C&amp;J Aviation LLC</span>
           <span class="brand-sub">Aircraft Mechanics</span>
@@ -336,7 +357,9 @@ p{margin:0 0 1.1em}
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow" style="color:var(--accent)">Monroe County Airport &middot; KMNV &middot; East Tennessee</p>
+      <div class="hero-grid">
+      <div>
+      <p class="eyebrow" style="color:var(--hero-em)">Monroe County Airport &middot; KMNV &middot; East Tennessee</p>
       <h1>Aircraft maintenance that <em>comes to you</em></h1>
       <p class="hero-lede">Certified A&amp;P/IA mechanics with over 30 years of combined experience, specializing in mobile maintenance for General Aviation professionals and enthusiasts.</p>
       <div class="hero-badges">
@@ -353,6 +376,9 @@ p{margin:0 0 1.1em}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
           Email Us
         </a>
+      </div>
+      </div>
+      <div class="hero-badge" role="img" aria-label="C&amp;J Aviation LLC badge"></div>
       </div>
     </div>
   </section>
@@ -401,7 +427,7 @@ p{margin:0 0 1.1em}
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <div><strong>Specialty</strong><span>Mobile, on-site maintenance</span></div>
+              <div><strong>Specialty</strong><span>Mobile, on-site maintenance &middot; pre-buy inspections &middot; weight and balance</span></div>
             </li>
           </ul>
         </aside>
@@ -414,7 +440,7 @@ p{margin:0 0 1.1em}
     <div class="wrap">
       <p class="eyebrow">What We Do</p>
       <h2>Services</h2>
-      <p class="lede">Inspections, maintenance, and repairs for piston General Aviation aircraft &mdash; performed on site whenever the job allows.</p>
+      <p class="lede">Inspections, maintenance, and repairs for General Aviation aircraft &mdash; performed on site whenever the job allows.</p>
 
       <div class="svc-grid">
         <article class="svc svc-feature">
@@ -423,6 +449,8 @@ p{margin:0 0 1.1em}
             <span class="svc-tag">Our Specialty</span>
             <h3>We specialize in pre-buy inspections</h3>
             <p>Call us before considering purchasing an airplane, and we will do a thorough pre-buy inspection that fits within your budget.</p>
+            <p>An airplane is a big investment &mdash; make sure you know what you're walking into. Pre-buys give you leverage on the price, and peace of mind knowing your first annual isn't going to be more expensive than you expected.</p>
+            <p class="svc-kicker">This isn't a used car. It's an airplane.</p>
           </div>
         </article>
         <article class="svc">
@@ -453,7 +481,7 @@ p{margin:0 0 1.1em}
         <article class="svc">
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
           <h3>Mobile Weight &amp; Balance</h3>
-          <p>If you've had any maintenance or repairs done, we can come to your aircraft and re-weigh it.</p>
+          <p>If you've had any maintenance or repairs that require a full re-weight of the aircraft, call us for a quote.</p>
         </article>
       </div>
     </div>
@@ -486,6 +514,8 @@ p{margin:0 0 1.1em}
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Madisonville &amp; Monroe County</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Maryville &amp; Blount County</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Knoxville area fields</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>McMinn County</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Campbell County</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Greater East Tennessee</li>
           </ul>
           <p style="margin-top:22px;font-size:.94rem;color:var(--muted)">These are the areas we work most often &mdash; not a boundary. If you're further out, call and we'll work it out.</p>
@@ -497,7 +527,7 @@ p{margin:0 0 1.1em}
   <!-- ============ GALLERY ============ -->
   <section class="section gallery" id="gallery">
     <div class="wrap">
-      <p class="eyebrow" style="color:var(--accent)">Gallery</p>
+      <p class="eyebrow" style="color:var(--band-em)">Gallery</p>
       <h2>On the job</h2>
       <p class="lede">Work in progress, the shop, and aircraft we've had our hands on.</p>
       <div class="gal-grid">
@@ -533,9 +563,17 @@ p{margin:0 0 1.1em}
         </article>
 
         <article class="card">
-          <div class="card-role">Co-Owner</div>
-          <div class="card-name">Cale Newman</div>
-          <div class="card-cert">A&amp;P / IA</div>
+          <div class="person-head">
+            <div class="person-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="card-role">Co-Owner</div>
+              <div class="card-name">Cale Newman</div>
+              <div class="card-cert">A&amp;P / IA</div>
+            </div>
+          </div>
+          <p class="person-bio"><span class="bio-todo">Bio to come &mdash; Cale, a few lines: years in the field, where you trained, what you most like working on.</span></p>
           <a class="tel" href="tel:+14239203654">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (423) 920-3654
@@ -543,19 +581,35 @@ p{margin:0 0 1.1em}
         </article>
 
         <article class="card">
-          <div class="card-role">Co-Owner &middot; Director of Maintenance</div>
-          <div class="card-name">Joel Brashear</div>
-          <div class="card-cert">A&amp;P / IA</div>
+          <div class="person-head">
+            <div class="person-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="card-role">Co-Owner &middot; Director of Maintenance</div>
+              <div class="card-name">Joel Brashear</div>
+              <div class="card-cert">A&amp;P / IA</div>
+            </div>
+          </div>
+          <p class="person-bio"><span class="bio-todo">Bio to come &mdash; Joel, a few lines: years in the field, where you trained, what you most like working on.</span></p>
           <a class="tel" href="tel:+12819084558">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (281) 908-4558
           </a>
         </article>
 
-        <article class="card card--wide">
-          <div class="card-role">Lead Mechanic</div>
-          <div class="card-name">Wyatt McKee</div>
-          <div class="card-cert">Lead A&amp;P</div>
+        <article class="card">
+          <div class="person-head">
+            <div class="person-photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="card-role">Lead Mechanic</div>
+              <div class="card-name">Wyatt McKee</div>
+              <div class="card-cert">Lead A&amp;P</div>
+            </div>
+          </div>
+          <p class="person-bio"><span class="bio-todo">Bio to come &mdash; Wyatt, a few lines: years in the field, where you trained, what you most like working on.</span></p>
           <a class="tel" href="tel:+18659647957">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (865) 964-7957
@@ -595,7 +649,7 @@ p{margin:0 0 1.1em}
   <div class="wrap">
     <div class="foot-top">
       <a class="brand" href="#top" style="margin-right:0">
-        <span class="brand-mark">CJ</span>
+        <span class="brand-mark" role="img" aria-label="C&amp;J Aviation LLC badge"></span>
         <span class="brand-text">
           <span class="brand-name">C&amp;J Aviation LLC</span>
           <span class="brand-sub">Aircraft Mechanics</span>
